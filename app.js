@@ -7,8 +7,12 @@ const express = require("express");
 const app = express();
 const fs = require('fs')
 
+const cors = require('cors')
+
 //load the quotes JSON
 const quotes = require("./quotes.json");
+
+app.use(cors())
 
 // Now register handlers for some routes:
 //   /                  - Return some helpful welcome info (text)
